@@ -11,9 +11,10 @@ const Swipe = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <Swiper
+          useViewOverflow={Platform.OS === "ios"}
           cards={carddata}
           cardIndex={index}
           renderCard={(card) => <Card card={card} />}
