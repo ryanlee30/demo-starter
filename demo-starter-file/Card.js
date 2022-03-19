@@ -3,21 +3,28 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
   TouchableWithoutFeedback,
 } from "react-native";
+import { Video } from "expo-av";
 
 const Card = ({ card }) => {
-  const [imgIndex, setImageIndex] = useState(0);
-  const changePhoto = () => {
-    setImageIndex((imgIndex + 1) % 3);
+  const [videoIndex, setVideoIndex] = useState(0);
+  const changeVideo = () => {
+    setVideoIndex((videoIndex + 1) % 3);
   };
 
   return (
-    <TouchableWithoutFeedback onPress={changePhoto}>
+    <TouchableWithoutFeedback onPress={changeVideo}>
       <View style={styles.card}>
-        <Image source={card.images[imgIndex]} style={styles.cardImage} />
-        <Text style={styles.txt}>{card.name}</Text>
+        <Video
+          source={{uri: card.videos[videoIndex]}}
+          isMuted={true}
+          shouldPlay
+          isLooping
+          resizeMode="cover"
+          style={styles.cardVideo}
+        /> 
+        <Text style={styles.txt}> {card.name} </Text>
       </View>
     </TouchableWithoutFeedback>
   );
@@ -38,19 +45,25 @@ const styles = StyleSheet.create({
     // backgroundColor: "#B1D0E0",
     backgroundColor: "#CEE5D0",
   },
-  cardImage: {
-    width: 300,
-    flex: 0.7,
+  cardVideo: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 20,
+    flex: 1.0,
     resizeMode: "contain",
-    backgroundColor: "#CEE5D0",
+    backgroundColor: "#000",
   },
   txt: {
-    flex: 0.1,
+    position: "absolute",
+    top: 0,
+    paddingTop: 15,
+    width: 200,
+    height: 100,
     fontWeight: "bold",
     fontSize: 40,
     color: "#AEFEFF",
+    textAlign: "center",
     textShadowColor: "rgba(0, 0, 0, 0.75)",
-    textShadowOffset: { width: -1, height: 1 },
-    textShadowRadius: 15,
+    textShadowRadius: 20
   },
 });

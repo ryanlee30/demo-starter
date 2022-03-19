@@ -17,8 +17,8 @@ const Swipe = () => {
           useViewOverflow={Platform.OS === "ios"}
           cards={carddata}
           cardIndex={index}
-          renderCard={(card) => <Card card={card} />}
-          onSwiper={onSwipe}
+          renderCard={(card) => <Card card={card}/>}
+          onSwiped={onSwipe}
           stackSize={4} //no of items
           stackScale={10} //scale between two stacks
           stackSeparation={14}

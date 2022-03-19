@@ -2,38 +2,38 @@
 export default [
   {
     id: 1,
-    name: "Hooman",
-    images: [
-      require("./assets/human.png"),
-      require("./assets/human2.png"),
-      require("./assets/human3.png"),
+    name: "Casey",
+    videos: [
+      "https://www.w3schools.com/html/mov_bbb.mp4",
+      "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     ],
   },
   {
     id: 2,
-    name: "Megalodon",
-    images: [
-      require("./assets/shark.png"),
-      require("./assets/shark2.png"),
-      require("./assets/shark3.png"),
+    name: "Steph",
+    videos: [
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     ],
   },
   {
     id: 3,
-    name: "Panda",
-    images: [
-      require("./assets/panda.png"),
-      require("./assets/panda2.png"),
-      require("./assets/panda3.png"),
+    name: "Luka",
+    videos: [
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "https://www.w3schools.com/html/mov_bbb.mp4",
     ],
   },
   {
     id: 4,
-    name: "Octopups",
-    images: [
-      require("./assets/octo.png"),
-      require("./assets/octo2.png"),
-      require("./assets/octo3.png"),
+    name: "Joel",
+    videos: [
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+      "https://www.w3schools.com/html/mov_bbb.mp4",
     ],
   },
 ];
